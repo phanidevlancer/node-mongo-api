@@ -141,3 +141,78 @@ During the development of this project, I gained insights into:
 3. Implementing proper error handling in Express
 4. Managing environment-specific configurations
 5. Creating a RESTful API with proper routes and controllers
+
+
+# Testing the Node.js MongoDB API
+
+This project includes a comprehensive test suite using Jest and Supertest to verify API functionality.
+
+## Testing Setup
+
+The test environment uses:
+- **Jest**: JavaScript testing framework
+- **Supertest**: For HTTP assertions
+- **mongodb-memory-server**: In-memory MongoDB server for testing
+
+## Test Structure
+
+```
+tests/
+├── app.test.js         - Tests for basic app functionality
+├── db-handler.js       - MongoDB in-memory setup
+├── product.test.js     - Tests for product endpoints
+└── user.test.js        - Tests for user endpoints
+```
+
+## Running Tests
+
+```bash
+# Run all tests
+npm test
+
+# Run specific test file
+npm test -- tests/user.test.js
+
+# Run with coverage report
+npm test -- --coverage
+```
+
+## Test Cases
+
+### User API Tests
+- Creating a new user
+- Handling duplicate emails
+- Validating required fields
+- Getting all users
+- Getting a single user by ID
+- Handling invalid user IDs
+
+### Product API Tests
+- Creating a new product
+- Validating required fields
+- Validating product categories
+- Getting all products
+- Getting a single product by ID
+- Handling invalid product IDs
+
+### App Tests
+- Testing the welcome route
+- Testing 404 handling for nonexistent routes
+
+## Adding New Tests
+
+To add new tests, create a new test file in the tests directory following the existing patterns. Make sure to:
+
+1. Import the necessary modules
+2. Connect to the test database
+3. Clean up after each test
+4. Group related tests using `describe` blocks
+5. Write clear, focused test cases with `it` blocks
+
+## Best Practices
+
+- Test both success and error scenarios
+- Test validation logic
+- Use clear, descriptive test names
+- Keep tests independent of each other
+- Clean up database after each test
