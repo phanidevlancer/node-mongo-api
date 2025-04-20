@@ -47,7 +47,8 @@ nodejs-mongo-api/
 5. **Environment Configuration**: Using dotenv for environment variables
 6. **Code Organization**: Well-structured codebase with clear responsibilities
 
-## Design Decisions
+<details>
+<summary><b>Design Decisions and Implementation Details</b></summary>
 
 ### Why MongoDB?
 MongoDB was chosen for this project because of its flexibility with document-based schemas, making it ideal for rapid development and easy adaptation to changing requirements. The Mongoose ODM provides a structured way to model application data.
@@ -132,7 +133,6 @@ Content-Type: application/json
 3. **Rate Limiting**: Protect API from abuse with rate limiting
 4. **Pagination**: Add pagination for list endpoints
 5. **Logging**: Implement advanced logging
-6. **Testing**: Add unit and integration tests
 
 ## Lessons Learned
 During the development of this project, I gained insights into:
@@ -141,7 +141,10 @@ During the development of this project, I gained insights into:
 3. Implementing proper error handling in Express
 4. Managing environment-specific configurations
 5. Creating a RESTful API with proper routes and controllers
+</details>
 
+<details>
+<summary><b>Testing Documentation</b></summary>
 
 # Testing the Node.js MongoDB API
 
@@ -216,3 +219,4 @@ To add new tests, create a new test file in the tests directory following the ex
 - Use clear, descriptive test names
 - Keep tests independent of each other
 - Clean up database after each test
+</details>
